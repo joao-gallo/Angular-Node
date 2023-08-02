@@ -12,9 +12,9 @@ const getAll = () => {
 const getOne = (id) => {
     return new Promise((accepted, rejected) => {
 
-        db.query('SELECT * FROM users WHERE id = ?', [id], (error, results) => {
+        db.query('SELECT * FROM testNodeAngular WHERE nome = ?', [id], (error, results) => {
             if (error) { rejected(error); return; }
-            if (results.length > 0) { //vai verificar se retornou mais de 1 e pegar o 1
+            if (results.length > 0) {
                 accepted(results[0]);
             } else {
                 accepted(false);

@@ -13,7 +13,7 @@ const getAll = async (req, res) => {
             telefone: users[i].telefone,
         })
     }
-    res.json(json);
+    res.json(json.result);
 }
 
 const getOne = async (req, res) => {
