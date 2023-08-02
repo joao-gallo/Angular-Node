@@ -1,0 +1,70 @@
+/* Reset padrão de margens e preenchimento */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+a {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilo para o cabeçalho (header) */
+header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilo para o título da aplicação */
+.app-title {
+    font-size: 28px;
+}
+
+/* Estilo para a barra de navegação (nav-bar) */
+.nav-bar {
+    background-color: #333;
+    padding: 10px;
+}
+
+/* Estilo para a lista de navegação (nav-list) */
+.nav-list {
+    list-style-type: none;
+}
+
+/* Estilo para os itens da lista de navegação (nav-item) */
+.nav-item {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Estilo para os links da lista de navegação (nav-item a) */
+.nav-item a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Estilo para os links ativos da lista de navegação */
+.nav-item a.active {
+    color: #007bff;
+}
+
+/* Estilo para o conteúdo principal (content) */
+.content {
+    padding: 20px;
+}

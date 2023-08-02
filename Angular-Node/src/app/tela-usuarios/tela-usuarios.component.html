@@ -1,0 +1,11 @@
+<div class="container">
+    <h1 class="title">Pessoas:</h1>
+    <ul class="pessoas-list">
+        <li *ngFor="let pessoa of pessoas" class="pessoa-item">
+            <span class="pessoa-info">
+                <strong>Nome:</strong> {{ pessoa.nome }} - <strong>CPF:</strong> {{ pessoa.cpf }}
+            </span>
+            <a [routerLink]="['/detalhes', pessoa.nome]" class="detalhes-link">Detalhes</a>
+        </li>
+    </ul>
+</div>
