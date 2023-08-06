@@ -11,17 +11,25 @@ const getAll = () => {
 
 const getOne = (id) => {
     return new Promise((accepted, rejected) => {
+        console.log('Recebendo o CPF:', id);
 
-        db.query('SELECT * FROM users WHERE id = ?', [id], (error, results) => {
-            if (error) { rejected(error); return; }
-            if (results.length > 0) { //vai verificar se retornou mais de 1 e pegar o 1
-                accepted(results[0]);
+        db.query('SELECT * FROM testNodeAngular WHERE cpf = ?', [id], (error, results) => {
+            if (error) {
+                console.error('Erro na consulta:', error);
+                rejected(error);
+                return;
+            }
+            if (results.length > 0) {
+                console.log('Registro encontrado:', results[0]);
+                accepted(results);
             } else {
+                console.log('Registro não encontrado.');
                 accepted(false);
             }
         });
     });
-}
+};
+
 const register = (nome, dataNascimento, cpf, telefone) => {
     return new Promise((accepted, rejected) => {
 

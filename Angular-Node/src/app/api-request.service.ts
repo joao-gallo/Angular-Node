@@ -19,7 +19,9 @@ export class ApiRequestService {
   }
 
   getOne(nome: string): Observable<any> {
-    const url = `${this.apiUrl}/${nome}`; // Substitua 'users' pelo endpoint correto da sua API para buscar os detalhes de um usuário pelo ID
+    console.log(nome);
+
+    const url = `${this.apiUrl}/${nome}`;
     return this.http.get<any>(url);
   }
 }

@@ -5,7 +5,7 @@
             <span class="pessoa-info">
                 <strong>Nome:</strong> {{ pessoa.nome }} - <strong>CPF:</strong> {{ pessoa.cpf }}
             </span>
-            <a [routerLink]="['/detalhes', pessoa.nome]" class="detalhes-link">Detalhes</a>
+            <a [routerLink]="['/detalhes', pessoa.cpf]" class="detalhes-link">Detalhes</a>
         </li>
     </ul>
 </div>

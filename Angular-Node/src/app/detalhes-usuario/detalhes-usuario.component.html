@@ -1,9 +1,9 @@
 <div class="container">
     <h1 class="app-title">Detalhes do Usuário</h1>
-    <p class="app-info">Nome: {{ usuario?.nome }}</p>
-    <p class="app-info">CPF: {{ usuario?.cpf }}</p>
-    <p class="app-info">Telefone: {{ usuario?.telefone }}</p>
-    <p class="app-info">Data de Nascimento: {{ usuario?.dataNascimento }}</p>
+    <p class="app-info">Nome: {{ usuario[0]?.nome }}</p>
+    <p class="app-info">CPF: {{ usuario[0]?.cpf }}</p>
+    <p class="app-info">Telefone: {{ usuario[0]?.telefone }}</p>
+    <p class="app-info">Data de Nascimento: {{ usuario[0]?.dataNascimento }}</p>
     <p class="app-info">Data de hoje: {{ dataHoje | date: 'dd/MM/yyyy' }}</p>
 
     <h2 class="app-title">Gráfico</h2>

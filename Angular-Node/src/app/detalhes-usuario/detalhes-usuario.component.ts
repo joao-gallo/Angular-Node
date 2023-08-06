@@ -17,11 +17,16 @@ export class DetalhesUsuarioComponent implements OnInit {
   constructor(private apiService: ApiRequestService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const nome = this.route.snapshot.paramMap.get('nome');
 
-    if (nome) {
-      this.apiService.getOne(nome).subscribe((data) => {
-        this.usuario = data.result;
+    const cpf = this.route.snapshot.paramMap.get('nome');
+    console.log(cpf, 'cpf');
+
+    if (cpf) {
+      this.apiService.getOne(cpf).subscribe((data) => {
+        console.log('====================================');
+        console.log(data, cpf);
+        console.log('====================================');
+        this.usuario = data;
         console.log(this.usuario, 'usuario');
 
       });
