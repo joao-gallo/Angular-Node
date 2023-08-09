@@ -6,17 +6,19 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
 import { AppComponent } from './app.component';
 import { TelaUsuariosComponent } from './tela-usuarios/tela-usuarios.component';
-import { ApiRequestService } from './api-request.service';
+import { ApiRequestService } from './services/api-request.service';
 import { CadastroUsuariosComponent } from './cadastro-usuarios/cadastro-usuarios.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { DetalhesUsuarioComponent } from './detalhes-usuario/detalhes-usuario.component';
+import { BarChartComponent } from './bar-chart/bar-chart.component';
 @NgModule({
   declarations: [
     AppComponent,
     TelaUsuariosComponent,
     CadastroUsuariosComponent,
     DetalhesUsuarioComponent,
+    BarChartComponent,
   ],
   imports: [
     HttpClientModule,

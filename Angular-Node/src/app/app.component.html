@@ -14,5 +14,12 @@
     </nav>
     <div class="content">
         <router-outlet></router-outlet>
+        <div *ngIf="divService.getShowDiv()" class="background">
+            <div class="background-image"></div>
+            <p class="center">Olá, Usuário</p>
+            <div class="container">
+                <app-bar-chart></app-bar-chart>
+            </div>
+        </div>
     </div>
 </body>

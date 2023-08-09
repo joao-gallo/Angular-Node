@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiRequestService } from '../api-request.service';
+import { ApiRequestService } from '../services/api-request.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 import { FormsModule } from '@angular/forms';
+import { DivService } from '../services/div.service';
 
 @Component({
   selector: 'app-cadastro-usuarios',
@@ -13,7 +14,9 @@ import { FormsModule } from '@angular/forms';
 export class CadastroUsuariosComponent implements OnInit {
   pessoa: any = {};
 
-  constructor(private apiService: ApiRequestService, private router: Router) { }
+  constructor(private apiService: ApiRequestService, private router: Router, public divService: DivService) {
+    this.divService.setShowDiv(false);
+  }
 
   ngOnInit() {
     this.pessoa = {
