@@ -1,0 +1,23 @@
+<div class="container">
+    <h1 class="title">Cadastro de Pessoas</h1>
+    <form (ngSubmit)="onSubmit()" class="form">
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" [(ngModel)]="pessoa.nome" required>
+        </div>
+        <div class="form-group">
+            <label for="cpf">CPF:</label>
+            <input type="text" mask="000.000.000-00" id="cpf" name="cpf" [(ngModel)]="pessoa.cpf" required>
+        </div>
+        <div class="form-group">
+            <label for="dataNascimento">Data de Nascimento:</label>
+            <input type="date" id="dataNascimento" name="dataNascimento" [(ngModel)]="pessoa.dataNascimento" required>
+        </div>
+        <div class="form-group">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" mask="(00)00000-0000" id="telefone" name="telefone" [(ngModel)]="pessoa.telefone"
+                required>
+        </div>
+        <button type="submit" class="btn-submit">Salvar</button>
+    </form>
+</div>
