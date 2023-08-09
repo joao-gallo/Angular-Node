@@ -14,8 +14,8 @@ export class TelaUsuariosComponent implements OnInit {
   pessoas: Pessoa[] = [];
 
   constructor(private apiService: ApiRequestService) {
-    console.log('o que ta rolando auqi, ', this.pessoas)
     this.getAll();
+    console.log('o que ta rolando auqi, ', this.pessoas)
   }
 
   ngOnInit(): void { }

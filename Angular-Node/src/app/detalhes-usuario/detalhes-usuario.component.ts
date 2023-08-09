@@ -18,10 +18,12 @@ export class DetalhesUsuarioComponent implements OnInit {
 
   ngOnInit(): void {
     const nome = this.route.snapshot.paramMap.get('nome');
-
+    console.log('====================================');
+    console.log(nome, 'isso esta chegando');
+    console.log('====================================');
     if (nome) {
       this.apiService.getOne(nome).subscribe((data) => {
-        this.usuario = data.result;
+        this.usuario = data;
         console.log(this.usuario, 'usuario');
 
       });
