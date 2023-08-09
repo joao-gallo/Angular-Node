@@ -11,8 +11,8 @@ const getAll = () => {
 
 const getOne = (id) => {
     return new Promise((accepted, rejected) => {
-
-        db.query('SELECT * FROM users WHERE id = ?', [id], (error, results) => {
+        console.log('Recebendo o CPF:', id);
+        db.query('SELECT * FROM testNodeAngular WHERE cpf = ?', [id], (error, results) => {
             if (error) { rejected(error); return; }
             if (results.length > 0) { //vai verificar se retornou mais de 1 e pegar o 1
                 accepted(results[0]);
